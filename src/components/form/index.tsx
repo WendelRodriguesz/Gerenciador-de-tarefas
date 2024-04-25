@@ -34,7 +34,6 @@ class Form extends React.Component {
                 </div>
                 <Button
                     text= "Adicionar" // passa por parametro o texto do botão
-                    
                 />
             </form>
         )

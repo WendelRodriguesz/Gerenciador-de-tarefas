@@ -1,8 +1,8 @@
-import style from "../list.module.scss"
+import Style from "./item.module.scss"
 
 export default function Item({ tarefa, tempo }: { tarefa: string, tempo: string}){
     return (
-        <li className={style.item}>
+        <li className={Style.item}>
         <h3> {tarefa} </h3>
         <span> {tempo} </span>
         </li>
