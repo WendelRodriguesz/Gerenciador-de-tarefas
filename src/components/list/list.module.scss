@@ -1,0 +1,37 @@
+// Estilização do formulário
+.listaTarefas {
+    display: flex;
+    flex-direction: column;
+    grid-area: item;
+    color: azure;
+    // align-items: center; /* Centraliza horizontalmente */
+    // max-width: 90%; /* Largura máxima do formulário */
+    margin: 30px auto 30px; /* Centraliza o formulário na página e adiciona espaço na parte superior */
+    padding: 20px;
+    font-size: 1.75rem;
+
+    .item{
+        background-color: rgb(70, 70, 70);
+        box-shadow: 2px 4px 4px #0000009F; // sombra do form
+        border-radius: 5px;
+        padding: 20px;
+        margin: 10px auto 10px;     
+        font-size: 1.25rem;
+
+        &:active{
+            background-color: #7784a8;
+            box-shadow: 2px 2px 4px #4d4d4d9f inset;
+        }
+        &:hover {
+            background-color: #0000009c;
+        }
+    
+    }
+    @media screen and (min-width: 1280px){
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around; 
+        padding: 24px;
+        box-sizing: border-box;
+    }
+}

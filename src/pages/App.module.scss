@@ -1,5 +1,5 @@
 .AppStyle{
-    display: grid;
+    // display: grid;
     grid-template-rows: min-content min-content auto;
     grid-template-areas: 
     "nova-tarefa" 
@@ -10,10 +10,10 @@
     min-width: 320px;
     min-height: calc(100vh - 32px);
     width: 100%;
-    padding: 32px;
+    padding: 40px;
     box-sizing: border-box;
     border-radius: 10px;
-    background-color: #4b4b4b;
+    background-color: #2e2e2e;
 
     @media screen and (min-width:1280px) {
         grid-template-areas: "nova-tarefa tarefas" "cronometro tarefas";
