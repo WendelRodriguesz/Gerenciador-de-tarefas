@@ -1,4 +1,4 @@
-import Style from "./item.module.scss"
+import Style from "./item.module.scss";
 
 export default function Item({ tarefa, tempo }: { tarefa: string, tempo: string}){
     return (
