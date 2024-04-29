@@ -3,9 +3,9 @@
     display: grid;
     grid-template-rows: min-content min-content auto;
     grid-template-areas:
-      "nova-tarefa"
+      "new-task"
       "stopwatch"
-      "tarefas";
+      "tasks";
     row-gap: 24px;
     min-width: 320px;
     min-height: calc(100vh - 32px);
@@ -17,8 +17,8 @@
   
     @media screen and (min-width: 1280px) {
       grid-template-areas:
-        "nova-tarefa tarefas"
-        "stopwatch tarefas";
+        "new-task tasks"
+        "stopwatch tasks";
       column-gap: 64px;
       grid-template-rows: min-content min-content;
       grid-template-columns: 750px 300px;

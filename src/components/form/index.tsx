@@ -1,48 +1,61 @@
 import React from "react";
 import Button from "../button";
 import style from './form.module.scss';
-import { ITarefa } from "../../types/tarefa";
+import { ITask } from "../../types/task";
+import {v4 as uuidv4} from "uuid";
 
 class Form extends React.Component <{
-    setTarefas: React.Dispatch<React.SetStateAction<ITarefa[]>>
+    setTask: React.Dispatch<React.SetStateAction<ITask[]>>
     }> {
     state = {
-        tarefa: "",
-        tempo: "00:00:00"
+        task: "",
+        time: "00:00:00"
     }
 
-    adicionarTarefa(evento: React.FormEvent<HTMLFormElement>){ 
+    addtask(evento: React.FormEvent<HTMLFormElement>){ 
         evento.preventDefault();
-        this.props.setTarefas(tarefasAntigas => [...tarefasAntigas, {...this.state}]);
+        this.props.setTask(oldTask => 
+            [
+                ...oldTask, 
+                {
+                    ...this.state, 
+                    select: false,
+                    completed: false,
+                    id: uuidv4()
+                }]);
+        this.setState({
+            task: "",
+            time: "00:00:00",
+        })
     }
     render(){
         return (
-            <form className={style.novaTarefa} onSubmit={this.adicionarTarefa.bind(this)}>
+            <form className={style.newtask} onSubmit={this.addtask.bind(this)}>
                 <div className={style.inputContainer}>
-                    <label htmlFor="tarefa">
+                    <label htmlFor="task">
                         Titulo:
                     </label>
                     <input
                         type="text"
-                        name="tarefa"
-                        value={this.state.tarefa}
-                        onChange={evento => this.setState({...this.state, tarefa: evento.target.value})} // Colocando os campos dentro do state
-                        id="tarefa"
+                        name="task"
+                        value={this.state.task}
+                        onChange={evento => this.setState({...this.state, task: evento.target.value})} // Colocando os campos dentro do state
+                        id="task"
                         placeholder="O que você vai fazer?"
                         required
                     />
                 </div>
                 <div className={style.inputContainer}>
-                <label htmlFor="tempo">
-                    Tempo:
+                <label htmlFor="time">
+                    time:
                 </label>
                 <input
                     type="time"
                     step="1"
-                    name="tempo"
-                    value={this.state.tempo}
-                    onChange={evento => this.setState({...this.state, tempo: evento.target.value})} // Colocando os campos dentro do state
-                    id="tempo"
+                    name="time"
+                    value={this.state.time}
+                    onChange={evento => this.setState({...this.state, time: evento.target.value})} // Colocando os campos dentro do state
+                    id="time"
                     min="00:00:00"
                     max="24:00:00"
                     required
