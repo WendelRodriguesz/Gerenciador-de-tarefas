@@ -6,10 +6,10 @@ import Stopwatch from '../components/stopwatch';
 import { ITask } from "../types/task";
 
   function App() {
-    const [tasks, settasks] = useState<ITask[]>([]);
+    const [tasks, setTasks] = useState<ITask[]>([]);
     return (
       <div className={style.AppStyle}>
-        <Form setTask={settasks}/>
+        <Form setTasks ={setTasks}/>
         <List tasks ={tasks}/>
         <Stopwatch/>
       </div>

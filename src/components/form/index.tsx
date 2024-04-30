@@ -5,7 +5,7 @@ import { ITask } from "../../types/task";
 import {v4 as uuidv4} from "uuid";
 
 class Form extends React.Component <{
-    setTask: React.Dispatch<React.SetStateAction<ITask[]>>
+    setTasks: React.Dispatch<React.SetStateAction<ITask[]>>
     }> {
     state = {
         task: "",
@@ -14,7 +14,7 @@ class Form extends React.Component <{
 
     addtask(evento: React.FormEvent<HTMLFormElement>){ 
         evento.preventDefault();
-        this.props.setTask(oldTask => 
+        this.props.setTasks(oldTask => 
             [
                 ...oldTask, 
                 {
@@ -47,7 +47,7 @@ class Form extends React.Component <{
                 </div>
                 <div className={style.inputContainer}>
                 <label htmlFor="time">
-                    time:
+                    Tempo:
                 </label>
                 <input
                     type="time"
