@@ -19,7 +19,7 @@ class Form extends React.Component <{
                 ...oldTask, 
                 {
                     ...this.state, 
-                    select: false,
+                    selected: false,
                     completed: false,
                     id: uuidv4()
                 }]);
