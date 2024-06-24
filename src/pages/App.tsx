@@ -11,16 +11,20 @@ import { ITask } from "../types/task";
 
     function selectTask(taskSelected: ITask){ // função para mostrar qual o item selecionado
       setSelected(taskSelected);
+      setTasks(oldTasks => oldTasks.map(task => ({
+        ...task,
+        selected: task.id === taskSelected.id ? true : false // operação ternária sobre a tarefa selecionada
+      })));
     }
 
     return (
       <div className={style.AppStyle}>
         <Form setTasks ={setTasks}/>
         <List 
-          tasks ={tasks}
+          tasks ={tasks} 
           selectTask ={selectTask}
         />
-        <Stopwatch/>
+        <Stopwatch selected={selected}/>
       </div>
     );
 }

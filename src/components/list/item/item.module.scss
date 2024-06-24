@@ -1,5 +1,5 @@
 .item {
-    background-color: #4d4d4db6;
+    background-color: #5858588c;
     border-radius: 8px;
     box-shadow: 2px 4px 4px #0000009f;
     padding: 12px;
@@ -28,16 +28,16 @@
     }
   }
   
-  .itemSelecionado {
-    background-color: #292929;
+  .itemSelected {
+    background-color: #1b1b1b;
     box-shadow: 2px 4px 4px #0000009f inset;
   }
   
-  .itemCompletado {
+  .itemCompleted {
     background-color: #566f42;
     cursor: auto;
   
-    .concluido {
+    .success {
       display: block;
     //   background-image: url("../../../assets/img/check-mark.svg");
       background-repeat: no-repeat;

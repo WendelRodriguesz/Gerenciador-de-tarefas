@@ -16,7 +16,9 @@ export default function Item(
     } : 
     Props){
     return (
-        <li className={Style.item} onClick={() => selectTask(
+        <li 
+            className={`${Style.item} ${selected ? Style.itemSelected : ''}`} 
+            onClick={() => selectTask(
             {
                 task, 
                 time, 
