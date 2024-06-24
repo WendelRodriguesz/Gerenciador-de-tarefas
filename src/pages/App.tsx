@@ -16,7 +16,23 @@ import { ITask } from "../types/task";
         selected: task.id === taskSelected.id ? true : false // operação ternária sobre a tarefa selecionada
       })));
     }
-
+  
+    function finishTask() {
+      setSelected(undefined);
+  
+      if (selected) {
+        setTasks(oldTaks => oldTaks.map(task => {
+          if (task.id === selected.id) {
+            return {
+              ...task,
+              selected: false,
+              completed: true
+            }
+          }
+          return task;
+        }))
+      }
+    }
     return (
       <div className={style.AppStyle}>
         <Form setTasks ={setTasks}/>
@@ -24,7 +40,10 @@ import { ITask } from "../types/task";
           tasks ={tasks} 
           selectTask ={selectTask}
         />
-        <Stopwatch selected={selected}/>
+        <Stopwatch 
+          selected={selected}
+          finishTask={finishTask}
+        />
       </div>
     );
 }
