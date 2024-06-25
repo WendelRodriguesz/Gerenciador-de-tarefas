@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+# Task’s Day: Gerenciador de Tarefas de Estudo
+O **Task's Day** é um aplicativo desenvolvido com **React**, **TypeScript** e **SCSS** para ajudar você a organizar suas tarefas de estudo. Inspirado no curso da Alura, "React Escrevendo com TypeScript", fizemos modificações e melhorias para tornar o aplicativo ainda mais útil. Vamos dar uma olhada nas principais funcionalidades:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Funcionalidades Principais
 
-## Available Scripts
+1. **Adicionar Tarefa:**
+   - Crie tarefas de estudo, como "React", "TypeScript" ou qualquer outro tópico relevante.
+   - Cada tarefa inclui um título e o tempo estimado para estudá-la.
 
-In the project directory, you can run:
+2. **Lista de Tarefas:**
+   - As tarefas adicionadas são exibidas em uma lista.
+   - Você pode selecionar uma tarefa para iniciar o cronômetro.
 
-### `npm start`
+3. **Cronômetro Integrado:**
+   - Quando você seleciona uma tarefa, o tempo estimado é exibido no cronômetro.
+   - O cronômetro começa a contar a partir do tempo definido para a tarefa.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4. **Iniciar e Completar Tarefa:**
+   - Clique no botão "Começar" para iniciar o cronômetro.
+   - Quando o tempo chegar a zero, a tarefa é marcada como concluída e não pode mais ser clicada.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Personalizações e Melhorias
 
-### `npm test`
+Além das funcionalidades básicas, fizemos as seguintes modificações e melhorias:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Personalização Visual:**
+  - Utilizamos SCSS para estilizar o aplicativo, tornando-o único e agradável visualmente.
 
-### `npm run build`
+- **Expansão Futura:**
+  - Planejamos adicionar mais funcionalidades no futuro, tornando o Task's Day ainda mais útil para o dia a dia.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Repositório no GitHub
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+O código-fonte do Task's Day está disponível no meu [repositório do GitHub](https://github.com/seu-usuario/task-s-day). Sinta-se à vontade para explorar, clonar e contribuir!
